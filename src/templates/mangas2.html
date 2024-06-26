@@ -1,0 +1,703 @@
+{% extends "base.html" %}
+{% block title %}AniPop - Mangás {% endblock %}
+
+
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-12 col-lg-4 esquerdo-categorias">
+
+            <div class="text-center">
+                <center>
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded carrossel-pag-categorias">
+                            <div class="carousel-item  h-100 active"
+                                style="background-image: url({{url_for('static', filename='imagens/carrossel/Zoro_Carousel.png')}}); background-size:cover"
+                                data-bs-interval="4000">
+
+                            </div>
+                            <div class="carousel-item h-100" data-bs-interval="4000"
+                                style="background-image: url({{url_for('static', filename='imagens/carrossel/Record_of_Ragnarock_Carousel.png')}}); background-size:cover">
+
+                            </div>
+                            <div class="carousel-item h-100" data-bs-interval="4000"
+                                style="background-image: url({{url_for('static', filename='imagens/carrossel/Konosuba_Carousel.png')}}); background-size:cover">
+
+                            </div>
+                        </div>
+                    </div>
+                </center>
+
+                <br>
+
+
+                <!-- Cordion -->
+
+                <div class="accordion " id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item ">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-dark" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                <!-- BTN Cordion -->
+                                <div class="row ">
+                                    <div class="col">
+                                        <h2 class="texto-acordion-filtrar">Filtrar</h2>
+                                    </div>
+                                    <div class="col">
+                                        <img src="{{url_for('static', filename='imagens/icons-logo/Filtro_Icon.png')}}"
+                                            alt="Filtro_Icon" class="icone-acordion-filtrar">
+                                    </div>
+
+                                </div>
+
+                            </button>
+                        </h2>
+
+                        <!-- Vendido por -->
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body fundo-categorias-filtro">
+                                <div class="accordion" id="accordionPanelsStayOpenExample">
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                                Vendido por:
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <p class="form-check-label text-start " for="flexCheckDefault">
+                                                        AniPop
+                                                        </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <p class="form-check-label text-start" for="flexCheckDefault">
+                                                        Outros
+                                                    </p>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Preço -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                                Preço:
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault1">
+                                                        Até R$ 20,00
+                                                    </p>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault2">
+                                                        Até R$ 50,00
+                                                    </p>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault3">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault3">
+                                                        Até R$ 100,00
+                                                    </p>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault4">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault4">
+                                                        Acima de R$ 100,00
+                                                    </p>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Tipo de Produto -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                                Tipo de Produto:
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <p class="form-check-label text-start " for="flexCheckDefault">
+                                                        Mangás
+                                                        </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <p class="form-check-label text-start" for="flexCheckDefault">
+                                                        Light Novel
+                                                    </p>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <p class="form-check-label text-start" for="flexCheckDefault">
+                                                        Art Book
+                                                    </p>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Lançamentos -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                                Lançamentos
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault1">
+                                                        Pré-Venda
+                                                    </p>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault2">
+                                                        Últimos 7 dias
+                                                    </p>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault3">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault3">
+                                                        Últimos 30 dias
+                                                    </p>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault4">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault4">
+                                                        Mais de 30 dias
+                                                    </p>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Genêro -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                                                Gênero
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault1">
+                                                        Default radio
+                                                    </p>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault2">
+                                                        Default radio
+                                                    </p>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault3">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault3">
+                                                        Default radio
+                                                    </p>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Ofertas -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                                                Ofertas
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault1">
+                                                        Ofertas do Dia
+                                                    </p>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault2">
+                                                        Ofertas da Semana
+                                                    </p>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault3">
+                                                    <p class="form-check-label text-start" for="flexRadioDefault3">
+                                                       Ofertas da Semana Geek
+                                                    </p>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Lado Direito -->
+        <div class="col-12 col-lg-8">
+
+            <div class="container-fluid ">
+                <div class="row justify-content-around">
+                    <div class="  col-10 col-lg-3 col-sm-3 card distancia-cards">
+                        <div class="z-3 div-promo">
+                            25% Off</div>
+                        <div class="ratio ratio-1x1">
+                            <img src="{{url_for('static', filename='imagens/produtos/Spy_X_Family_Vol10.jpg')}}"
+                                class="card-img-top img-card" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 div-nome-item">
+                                        <div>
+                                            <center>
+                                                <h5 class="card-title tamanho-texto-item">
+                                                    Spy X Family Vol. 10
+                                            </center>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h6 class="card-text preco-comum">De R$ 37,90</h6>
+                                        <h3 class="card-text preco-promo">Por R$ 28,40</h3>
+
+                                        <center>
+                                            <a href="#" class="btn btn-primary">Comprar<img class="icone-comprar"
+                                                src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                               ></a>
+                                        </center>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="  col-10 col-lg-3 col-sm-3 card distancia-cards">
+                        <div class="z-3 div-promo">
+                            26% Off</div>
+                        <div class="ratio ratio-1x1">
+                            <img src="{{url_for('static', filename='imagens/produtos/Demon_Slayer_ Kimetsu_No_Yaiba_Vol11.jpg')}}"
+                                class="card-img-top img-card" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 div-nome-item">
+                                        <div>
+                                            <center>
+                                                <h5 class="card-title tamanho-texto-item">
+                                                    Demon Slayer - Kimetsu No Yaiba Vol. 11
+                                            </center>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h6 class="card-text preco-comum">De R$ 34,90</h6>
+                                        <h3 class="card-text preco-promo">Por R$ 25,95</h3>
+
+                                        <center>
+                                            <a href="#" class="btn btn-primary">Comprar<img class="icone-comprar"
+                                                src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                               ></a>
+                                        </center>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="  col-10 col-lg-3 col-sm-3 card distancia-cards">
+                        <div class="z-3 div-promo">
+                            19% Off</div>
+                        <div class="ratio ratio-1x1">
+                            <img src="{{url_for('static', filename='imagens/produtos/Record_of_Ragnarok_Volume_08_(Shuumatsu no Valkyrie).jpg')}}"
+                                class="card-img-top img-card" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 div-nome-item">
+                                        <div>
+                                            <center>
+                                                <h5 class="card-title tamanho-texto-item">
+                                                    Record of Ragnarok: Volume 08 (Shuumatsu no Valkyrie)
+                                            </center>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h6 class="card-text preco-comum">De R$ 36,90</h6>
+                                        <h3 class="card-text preco-promo">Por R$ 29,94</h3>
+
+                                        <center>
+                                            <a href="#" class="btn btn-primary">Comprar<img class="icone-comprar"
+                                                src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                               ></a>
+                                        </center>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Fim Row a baixo-->
+                </div>
+                <!-- Row 2 -->
+
+                <div class="row justify-content-around">
+                    <div class="  col-10 col-lg-3 col-sm-3 card distancia-cards">
+                        <div class="z-3 div-lancamento">
+                            Lançamentos</div>
+                        <div class="ratio ratio-1x1">
+                            <img src="{{url_for('static', filename='imagens/produtos/One_Punch_Man_Vol.26.jpg')}}"
+                                class="card-img-top img-card" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 div-nome-item">
+                                        <div>
+                                            <center>
+                                                <h5 class="card-title tamanho-texto-item">
+                                                    One-Punch Man Vol. 26
+                                            </center>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h3 class="card-text preco-comum">R$ 33,00</h3>
+                                        <h6 class="card-text preco-parcela">Até 3x sem juros</h6>
+
+                                        <center>
+                                            <a href="#" class="btn btn-primary">Comprar<img class="icone-comprar"
+                                                src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                               ></a>
+                                        </center>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="  col-10 col-lg-3 col-sm-3 card distancia-cards">
+                        <div class="z-3 div-lancamento">
+                            Lançamentos</div>
+                        <div class="ratio ratio-1x1">
+                            <img src="{{url_for('static', filename='imagens/produtos/Jujutsu_Kaisen _Batalha_de_Feiticeiros_Vol15.jpg')}}"
+                                class="card-img-top img-card" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 div-nome-item">
+                                        <div>
+                                            <center>
+                                                <h5 class="card-title tamanho-texto-item">
+                                                    Jujutsu Kaisen - Batalha de Feiticeiros Vol. 15
+                                            </center>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h3 class="card-text preco-comum">R$ 33,00</h3>
+                                        <h6 class="card-text preco-parcela">Até 3x sem juros</h6>
+
+                                        <center>
+                                            <a href="#" class="btn btn-primary">Comprar<img class="icone-comprar"
+                                                src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                               ></a>
+                                        </center>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="  col-10 col-lg-3 col-sm-3 card distancia-cards">
+                        <div class="z-3 div-pre-venda">
+                            Pré-venda</div>
+                        <div class="ratio ratio-1x1">
+                            <img src="{{url_for('static', filename='imagens/produtos/Monster_Kanzenban_Vol3.jpg')}}"
+                                class="card-img-top img-card" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 div-nome-item">
+                                        <div>
+                                            <center>
+                                                <h5 class="card-title tamanho-texto-item">
+                                                    Monster Kanzenban Vol. 3
+                                            </center>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h3 class="card-text preco-comum">R$ 99,90</h3>
+                                        <h6 class="card-text preco-parcela">Até 3x sem juros</h6>
+                                        <center>
+                                            <a href="#" class="btn btn-primary">Comprar<img class="icone-comprar"
+                                                src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                               ></a>
+                                        </center>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Fim Row a baixo-->
+                </div>
+
+                <!-- Row 3 -->
+
+                <div class="row justify-content-around">
+                    <div class="  col-10 col-lg-3 col-sm-3 card distancia-cards">
+                        
+                        <div class="ratio ratio-1x1">
+                            <img src="{{url_for('static', filename='imagens/produtos/My_Hero_Academia_Boku_no_Hero_Vol34.jpg')}}"
+                                class="card-img-top img-card" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 div-nome-item">
+                                        <div>
+                                            <center>
+                                                <h5 class="card-title tamanho-texto-item">
+                                                    My Hero Academia - Boku no Hero - Vol. 34
+                                            </center>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h3 class="card-text preco-comum">R$ 37,90</h3>
+                                        <h6 class="card-text preco-parcela">Até 3x sem juros</h6>
+
+                                        <center>
+                                            <a href="#" class="btn btn-primary">Comprar<img class="icone-comprar"
+                                                src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                               ></a>
+                                        </center>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="  col-10 col-lg-3 col-sm-3 card distancia-cards">
+                       
+                        <div class="ratio ratio-1x1">
+                            <img src="{{url_for('static', filename='imagens/produtos/Chainsaw_Man_Vol10.jpeg')}}"
+                                class="card-img-top img-card" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 div-nome-item">
+                                        <div>
+                                            <center>
+                                                <h5 class="card-title tamanho-texto-item">
+                                                    Chainsaw Man Vol. 10
+                                            </center>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h3 class="card-text preco-comum">R$ 39,90</h3>
+                                        <h6 class="card-text preco-parcela">Até 3x sem juros</h6>
+
+                                        <center>
+                                            <a href="#" class="btn btn-primary">Comprar<img class="icone-comprar"
+                                                src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                               ></a>
+                                        </center>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="  col-10 col-lg-3 col-sm-3 card distancia-cards">
+                        
+                        <div class="ratio ratio-1x1">
+                            <img src="{{url_for('static', filename='imagens/produtos/Bleach_Remix_01.jpg')}}"
+                                class="card-img-top img-card" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 div-nome-item">
+                                        <div>
+                                            <center>
+                                                <h5 class="card-title tamanho-texto-item">
+                                                   
+                                                    Bleach Remix - 01</h5>
+                                            </center>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h3 class="card-text preco-comum">R$ 64,90</h3>
+                                        <h6 class="card-text preco-parcela">Até 3x sem juros</h6>
+
+                                        <center>
+                                            <a href="#" class="btn btn-primary">Comprar<img class="icone-comprar"
+                                                src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                               ></a>
+                                        </center>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Fim Row a baixo-->
+                </div>
+
+
+
+
+
+            </div>
+
+            <br><br>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="/Mangas" tabindex="-1">Anterior</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="/Mangas">1</a></li>
+                    <li class="page-item"><a class="page-link" href="/Mangas2">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Próximo</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block voltar %}<a href="/Mangas" class="btn btn-outline-light btn-lg " role="button">Voltar para o topo</a>{%
+endblock %}

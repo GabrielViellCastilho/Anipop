@@ -1,0 +1,678 @@
+{% extends "base.html" %}
+{% block title %}AniPop - Home{% endblock %}
+
+
+
+{% block body %}
+<!-- Carrossel -->
+<div class="position-relative">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="{{url_for('static', filename='imagens/carrossel/Hq.png')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="{{url_for('static', filename='imagens/carrossel/Jogos.png')}}" class="d-block w-100"
+                    alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{url_for('static', filename='imagens/carrossel/Animes.png')}}" class="d-block w-100"
+                    alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{url_for('static', filename='imagens/carrossel/Cartoon.png')}}" class="d-block w-100"
+                    alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- Categorias -->
+
+
+<div class="container-fluid">
+
+    <div class="row justify-content-around">
+
+        <div class="col-10 col-lg-3 rounded div-categorias">
+            <br>
+            <center>
+                <div class="rounded div-texto-categorias">
+                    Categorias Populares</div>
+                <br>
+            </center>
+
+
+
+
+
+            <div class="row">
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Roupas.png')}}" alt="Roupas">
+                            <p>Roupas</p>
+                        </a>
+                    </center>
+                </div>
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Tabuleiro.png')}}"
+                                alt="Jogos de Tabuleiro">
+                            <p style="text-align: center;">Jogos de Tabuleiro</p>
+                        </a>
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Xbox_SX.png')}}"
+                                alt="Vídeo Games">
+                            <p>Consoles</p>
+                        </a>
+                    </center>
+                </div>
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Acessorios.png')}}"
+                                alt="Acessorios">
+                            <p>Acessórios</p>
+                        </a>
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        <!-- Categoria 2 -->
+        <div class="col-10 col-lg-3 rounded div-categorias">
+            <br>
+            <center>
+                <div class="rounded div-texto-categorias">
+                    Para Você</div>
+                <br>
+            </center>
+
+
+
+
+
+            <div class="row">
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Echo.png')}}"
+                                alt="Echo Dot (4° Geração)">
+                            <p>Echo Dot (4° Geração)</p>
+                        </a>
+                    </center>
+                </div>
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Caneca_SG.png')}}"
+                                alt="Caneca Super Girl">
+                            <p>Caneca Super Girl</p>
+                        </a>
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Livro_Harry.png')}}"
+                                alt="Harry Potter e a Ordem da Fênix">
+                            <p>Harry Potter e a Ordem da Fênix</p>
+                        </a>
+                    </center>
+                </div>
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Zelda.png')}}"
+                                alt="The Legend of Zelda Tears of the Kingdom">
+                            <p>The Legend of Zelda Tears of the Kingdom</p>
+                        </a>
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Categoria 3 -->
+
+
+
+        <div class="col-10 col-lg-3 rounded div-categorias">
+            <br>
+            <center>
+                <div class="rounded div-texto-categorias">
+                    Os Mais Vendidos</div>
+                <br>
+            </center>
+
+
+
+
+
+            <div class="row">
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Controle.png')}}"
+                                alt="Controle DualSense - Branco">
+                            <p>Controle DualSense - Branco</p>
+                        </a>
+                    </center>
+                </div>
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Chainsaw_Man_Vol12.png')}}"
+                                alt="Chainsaw Man Vol. 12">
+                            <p>Chainsaw Man Vol. 12</p>
+                        </a>
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Funko_Pop_Jake.png')}}"
+                                alt="Funko Pop! Jake - 1074">
+                            <p>Funko Pop! Jake - 1074</p>
+                        </a>
+                    </center>
+                </div>
+                <div class="col">
+                    <center>
+                        <a>
+                            <img src="{{url_for('static', filename='imagens/categoria/Fone.png')}}"
+                                alt="Redmi Airdots 3 - Rosa">
+                            <p>Redmi Airdots 3 - Rosa</p>
+                        </a>
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<br>
+<!-- Carrossel 2 -->
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+
+            <div class="d-block w-100" alt="...">
+                <div class="container rounded bg-navegue-por-categoria">
+                    <div class="row">
+                        <h2>Navegue por Categoria</h2>
+                    </div>
+                    <div class="row justify-content-around">
+
+                        <div class="col-5 col-lg-2">
+                            <center>
+                                <img src="{{url_for('static', filename='imagens/carrossel/carrossel-categoria/Roupas_Categ.png')}}"
+                                    alt="Roupas" class="img-categ">
+                                <p>Roupas</p>
+                            </center>
+                        </div>
+
+                        <div class="col-5 col-lg-2">
+                            <center>
+                                <img src="{{url_for('static', filename='imagens/carrossel/carrossel-categoria/RPG_de_Mesa.png')}}"
+                                    alt="Jogos de Tabuleiro" class="img-categ">
+                                <p>Jogos de Tabuleiro</p>
+                            </center>
+                        </div>
+
+                        <div class="col-5 col-lg-2">
+                            <center>
+                                <img src="{{url_for('static', filename='imagens/carrossel/carrossel-categoria/Console_Categ.png')}}"
+                                    alt="Consoles" class="img-categ">
+                                <p>Consoles</p>
+                            </center>
+                        </div>
+
+                        <div class="col-5 col-lg-2">
+                            <center>
+                                <img src="{{url_for('static', filename='imagens/carrossel/carrossel-categoria/Poster_Categ.png')}}"
+                                    alt="Posters" class="img-categ">
+                                <p>Posters</p>
+                            </center>
+                        </div>
+
+                        <div class="col-5 col-lg-2">
+                            <center>
+                                <img src="{{url_for('static', filename='imagens/carrossel/carrossel-categoria/Cards_Categ.png')}}"
+                                    alt="Cards" class="img-categ">
+                                <p>Cards</p>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="d-block w-100" alt="...">
+                <div class="container rounded bg-navegue-por-categoria">
+                    <div class="row">
+                        <h2>Navegue por Categoria</h2>
+                    </div>
+                    <div class="row justify-content-around">
+
+                        <div class="col-5 col-lg-2">
+                            <center>
+                                <img src="{{url_for('static', filename='imagens/carrossel/carrossel-categoria/Controles_Categ.png')}}"
+                                    alt="Controles" class="img-categ">
+                                <p>Controles</p>
+                            </center>
+                        </div>
+
+                        <div class="col-5 col-lg-2">
+                            <center>
+                                <img src="{{url_for('static', filename='imagens/carrossel/carrossel-categoria/Teclados_Categ.png')}}"
+                                    alt="Teclados" class="img-categ">
+                                <p>Teclados</p>
+                            </center>
+                        </div>
+
+                        <div class="col-5 col-lg-2">
+                            <center>
+                                <a href="/Mangas" class="link-dark link-underline-opacity-0">
+                                    <img src="{{url_for('static', filename='imagens/carrossel/carrossel-categoria/Mangas_Categ.png')}}"
+                                        alt="Mangás" class="img-categ">
+                                    <p>Mangás</p>
+                                </a>
+                            </center>
+                        </div>
+
+                        <div class="col-5 col-lg-2">
+                            <center>
+                                <img src="{{url_for('static', filename='imagens/carrossel/carrossel-categoria/Livros_Categ.png')}}"
+                                    alt="Livros" class="img-categ">
+                                <p>Livros</p>
+                            </center>
+                        </div>
+
+                        <div class="col-5 col-lg-2">
+                            <center>
+                                <img src="{{url_for('static', filename='imagens/carrossel/carrossel-categoria/Acessorios_Categ.png')}}"
+                                    alt="Acessórios" class="img-categ">
+                                <p>Acessórios</p>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<br><br>
+<hr>
+<h1 style="color: rgb(0, 0, 0); text-align: center;"><span style="color: rgb(40, 82, 220);">Novidades</span> do dia!
+</h1>
+<hr>
+
+<!-- Cards -->
+
+<div class="container-fluid ">
+    <div class="row justify-content-around">
+        <div class=" col-10 col-lg-2 col-sm-5 card distancia-cards">
+            <div class="div-promo z-3">
+                15% Off</div>
+            <div class="ratio ratio-1x1">
+                <img src="{{url_for('static', filename='imagens/produtos/Dragonball_Fighter_Z_PS4.jpg')}}"
+                    class="card-img-top img-card" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 div-nome-item">
+                            <div>
+                                <center>
+                                    <h5 class="card-title tamanho-texto-item">
+                                        Dragon Ball FighterZ - PlayStation 4
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h6 class="card-text preco-comum">De R$ 249,90</h6>
+                            <h4 class="card-text preco-promo">Por R$ 212,42</h4>
+
+                            <center>
+                                <a href="#" class="btn btn-primary">Comprar<img
+                                        src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                        class="icone-comprar"></a>
+                            </center>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="  col-10 col-lg-2 col-sm-5 card card-margin">
+            <div class="div-promo z-3">
+                20% Off</div>
+            <div class="ratio ratio-1x1">
+                <img src="{{url_for('static', filename='imagens/produtos/Echo_Show_8_Segunda_Geração.png')}}"
+                    class="card-img-top img-card" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 div-nome-item">
+                            <div>
+                                <center>
+                                    <h5 class="card-title tamanho-texto-item">
+                                        Echo Show 8 (2ª Geração): Tela Inteligente HD de 8" com Alexa e câmera de 13 MP
+                                        - Cor Preta
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h6 class="card-text preco-comum">De R$ 999,00</h6>
+                            <h4 class="card-text preco-promo">Por R$ 799,20</h4>
+
+                            <center>
+                                <a href="#" class="btn btn-primary">Comprar<img
+                                        src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                        class="icone-comprar"></a>
+                            </center>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="  col-10 col-lg-2 col-sm-5 card card-margin">
+            <div class="div-promo z-3">
+                30% Off</div>
+            <div class="ratio ratio-1x1">
+                <img src="{{url_for('static', filename='imagens/produtos/Thanos_HQ.jpg')}}"
+                    class="card-img-top img-card" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 div-nome-item">
+                            <div>
+                                <center>
+                                    <h5 class="card-title tamanho-texto-item">
+                                        A Ascensão de Thanos: Marvel Essenciais Capa dura
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h6 class="card-text preco-comum">De R$ 49,90</h6>
+                            <h4 class="card-text preco-promo">Por R$ 34,93</h4>
+
+                            <center>
+                                <a href="/A_Ascensão_de_Thanos_Marvel_Essenciais_Capa_dura"
+                                    class="btn btn-primary">Comprar<img
+                                        src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                        class="icone-comprar"></a>
+                            </center>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="  col-10 col-lg-2 col-sm-5 card card-margin">
+            <div class="div-promo z-3">
+                20% Off</div>
+            <div class="ratio ratio-1x1">
+                <img src="{{url_for('static', filename='imagens/produtos/Record_of_Ragnarock_vol2.jpg')}}"
+                    class="card-img-top img-card" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 div-nome-item">
+                            <div>
+                                <center>
+                                    <h5 class="card-title tamanho-texto-item">
+                                        Record of Ragnarok: Volume 02 (Shuumatsu no Valkyrie)
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h6 class="card-text preco-comum">De R$ 29,90</h6>
+                            <h4 class="card-text preco-promo">Por R$ 20,90</h4>
+
+                            <center>
+                                <a href="#" class="btn btn-primary">Comprar<img
+                                        src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                        class="icone-comprar"></a>
+                            </center>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Fim Row a baixo-->
+
+
+    <div class="row justify-content-around">
+        <div class=" col-10 col-lg-2 col-sm-5 card card-margin">
+            <div class="z-3 div-lancamento">
+                Lançamentos</div>
+            <div class="ratio ratio-1x1">
+                <img src="{{url_for('static', filename='imagens/produtos/Funko_Pop_Dipper.png')}}"
+                    class="card-img-top img-card" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 div-nome-item">
+                            <div>
+                                <center>
+                                    <h5 class="card-title tamanho-texto-item">
+                                        Funko Gravity Falls POP! Animation Dipper Pines Vinyl Figure #240
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h3 class="card-text preco-comum">R$ 159,90</h3>
+                            <h6 class="card-text preco-parcela">Até 8x sem juros</h6>
+
+                            <center>
+                                <a href="#" class="btn btn-primary">Comprar<img
+                                        src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                        class="icone-comprar"></a>
+                            </center>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class=" col-10 col-lg-2 col-sm-5 card card-margin">
+            <div class="z-3 div-lancamento">
+                Lançamentos</div>
+            <div class="ratio ratio-1x1">
+                <img src="{{url_for('static', filename='imagens/produtos/SpiderMan_Camisa.png')}}"
+                    class="card-img-top img-card" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 div-nome-item">
+                            <div>
+                                <center>
+                                    <h5 class="card-title tamanho-texto-item">
+                                        Camisa / Camiseta Homem Aranha Tobey Maguire Manga Longa
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h3 class="card-text preco-comum">R$ 89,90</h3>
+                            <h6 class="card-text preco-parcela">Até 3x sem juros</h6>
+
+                            <center>
+                                <a href="#" class="btn btn-primary">Comprar<img
+                                        src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                        class="icone-comprar"></a>
+                            </center>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class=" col-10 col-lg-2 col-sm-5 card card-margin">
+            <div class="z-3 div-pre-venda">
+                Pré-venda</div>
+            <div class="ratio ratio-1x1">
+                <img src="{{url_for('static', filename='imagens/produtos/Stellar_Blade.png')}}"
+                    class="card-img-top img-card" alt="Stellar Blade Ps5">
+            </div>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 div-nome-item">
+                            <div>
+                                <center>
+                                    <h5 class="card-title tamanho-texto-item">
+                                        Stellar Blade Ps5
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h3 class="card-text preco-comum">R$ 349,90</h3>
+                            <h6 class="card-text preco-parcela">Ate 3x sem juros</h6>
+
+                            <center>
+                                <a href="#" class="btn btn-primary">Comprar<img
+                                        src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                        class="icone-comprar"></a>
+                            </center>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" col-10 col-lg-2 col-sm-5 card card-margin">
+            <div class="z-3 div-pre-venda">
+                Pré-venda</div>
+            <div class="ratio ratio-1x1">
+                <img src="{{url_for('static', filename='imagens/produtos/Aldebaran.png')}}"
+                    class="card-img-top img-card" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 div-nome-item">
+                            <div>
+                                <center>
+                                    <h5 class="card-title tamanho-texto-item">
+                                        Aldebaran - Figure
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h3 class="card-text preco-comum">R$ 419,90</h3>
+                            <h6 class="card-text preco-parcela">Até 10x sem juros</h6>
+
+                            <center>
+                                <a href="#" class="btn btn-primary">Comprar<img
+                                        src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                                        class="icone-comprar"></a>
+                            </center>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Row a baixo-->
+    </div>
+</div>
+
+<br>
+<hr>
+<center>
+    <div style="background-color: black; width: 50%; margin-top: 2%;" class="rounded">
+
+        <img src="{{url_for('static', filename='imagens/AniPop+.png')}}"
+            style="display: block; max-width: 100%; height: auto;">
+
+    </div>
+</center>
+<br>
+<br>
+{% endblock %}
+
+
+{% block voltar %}<a href="#" class="btn btn-outline-light btn-lg " role="button">Voltar para o topo</a>{% endblock %}

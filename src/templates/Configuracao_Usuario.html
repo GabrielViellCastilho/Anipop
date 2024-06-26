@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}AniPop - Mangás {% endblock %}
+
+
+
+{% block body %}
+<div class="container-fluid">
+    <p class="text-center fs-1 fw-bold">Configure seu perfil <img class="img-chibi-config" src="{{url_for('static', filename='imagens/Personagens/Chibi_Configuracao.png')}}"></p>
+
+    
+
+        <center>
+            <h4 class="border border-dark rounded-5 bg-dark text-white" >
+                Seus Dados</h4>
+        </center>
+
+        <div class="row justify-content-around bg-white rounded-5 mb-5">
+
+
+            <form action="{{url_for('Atualizar_Dados_Usuario')}}" method="POST">
+                <div class="container-fluid"><br>
+                    <div class='row'>
+                        <div class="col-12 col-lg-6">
+                            <div>
+                                <center>
+                                    <a data-bs-target="#modal_Editar_Avatar" href="#" data-bs-toggle="modal">
+                                        {% if Imagem_Usuario_Logado %}
+                                        <img class=" ms-2 rounded-circle"
+                                            src="{{url_for('static', filename=Imagem_Usuario_Logado)}}" alt="User"
+                                            style="width: 5rem;">
+                                        {% endif %}
+                                    </a>
+                                </center>
+                            </div>
+                            <div>
+                                <label for="Nome" class=" p-2">Nome Completo</label>
+                                <input type="text" value="{{ Nome_Inteiro_Logado}}" for="Nome"
+                                    class=" form-control border-black" disabled>
+                            </div>
+                            <div>
+                                <label for="Email" class="p-2">Email</label>
+                                <input type="email" value="{{Email_Logado}}" for="Email"
+                                    class=" form-control border-black" disabled>
+                            </div>
+                            <div>
+                                <label for="Data_Logado" class=" p-2">Data de Criação</label>
+                                <input type="text" value="{{Data_Logado}}" for="Data_Logado" disabled
+                                    class=" form-control border-black">
+                            </div>
+                            <div>
+                                <label for="CEP" class=" p-2">CEP</label>
+                                <input type="text" value="{{Cep_Logado}}" for="CEP" maxlength="10" name="CEP"
+                                    class=" form-control border-black">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div>
+                                <label for="Rua_Logado" class=" p-2">Rua</label>
+                                <input type="text" value="{{Rua_Logado}}" for="Rua_Logado" disabled
+                                    class=" form-control border-black">
+                            </div>
+                            <div>
+                                <label for="Bairro_Logado" class=" p-2">Bairro</label>
+                                <input type="text" value="{{Bairro_Logado}}" for="Bairro_Logado" disabled
+                                    class=" form-control border-black">
+                            </div>
+                            <div>
+                                <label for="Cidade" class=" p-2">Cidade</label>
+                                <input type="text" value="{{Cidade_Logado}}" for="Cidade_Logado" disabled
+                                    class=" form-control border-black">
+                            </div>
+                            <div>
+                                <label for="Estado_Logado" class=" p-2">Estado</label>
+                                <input type="text" value="{{Estado_Logado}}" for="Estado_Logado" disabled
+                                    class=" form-control border-black">
+                            </div>
+                            <div>
+                                <label for="Numero_Logado" class=" p-2">Número</label>
+                                <input type="text" value="{{Numero_Logado}}" for="Numero_Logado" name="Numero"
+                                    class=" form-control border-black">
+                            </div>
+                        </div>
+                    </div>
+                    <center>
+                        <button type="submit" class="btn btn-outline-success p-2 m-2 enviar-dados-usuario-button">Enviar</button>
+                    </center>
+                </div>
+            </form>
+
+        </div>
+
+</div>
+
+
+    {% endblock %}
+
+    {% block voltar %}<a href="/Configuracao_Usuario" class="btn btn-outline-light btn-lg " role="button">Voltar
+        para o topo</a>{%
+    endblock %}

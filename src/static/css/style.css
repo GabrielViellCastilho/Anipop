@@ -1,0 +1,208 @@
+body {
+    background-color: rgb(234, 234, 234);
+}
+
+.campo-de-pesquisa {
+    min-width: 60%;
+}
+
+.icon-navbar {
+    width: 40px;
+}
+
+.div-voltar {
+    background-color: gray;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.div-links-footer {
+    text-align: center;
+    color: aliceblue;
+}
+
+.div-text-git-footer {
+    text-align: center;
+    color: aliceblue;
+}
+
+.img-git-footer {
+    width: 10%;
+    min-width: 50px;
+}
+
+.img-logo-footer {
+    width: 10%;
+    min-width: 100px
+}
+
+.div-categorias {
+    background-color: rgb(255, 255, 255);
+    max-width: 100%;
+    margin-top: 2%;
+}
+
+.div-texto-categorias {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    max-width: 70%;
+    font-size: 150%;
+}
+
+.bg-navegue-por-categoria {
+    background-color: rgb(255, 255, 255);
+}
+
+.img-categ {
+    width: 15%;
+    min-width: 100px;
+}
+
+
+.div-promo {
+    color: white;
+    font-size: 100%;
+    background-color: red;
+    position: absolute;
+    left: -5%;
+    top: -2%;
+    padding: 2%;
+}
+
+.preco-comum {
+    color: blue;
+}
+
+.preco-promo{
+    color: red;
+}
+
+.card-margin {
+    margin-top: 50px;
+}
+
+.img-card {
+    object-fit: contain;
+}
+
+.div-lancamento {
+    color: white;
+    font-size: 100%;
+    background-color: gray;
+    position: absolute;
+    left: -5%;
+    top: -2%;
+    padding: 2%;
+}
+
+.div-pre-venda{
+    color: white;
+    font-size: 100%;
+    background-color:rgb(37, 150, 202);
+    position: absolute;
+    left: -5%;
+    top: -2%;
+    padding: 2%
+}
+.preco-parcela {
+    color: rgb(89, 9, 226);
+}
+
+
+.avatar-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.esquerdo-categorias{
+    background-color: white;
+    padding-top: 2%;
+}
+
+.avatar-button img {
+    display: block;
+    border-radius: 50%;
+}
+
+.carrossel-pag-categorias{
+    max-width: 10cm;
+    height: 5cm;
+}
+
+.texto-acordion-filtrar{
+    color: rgb(255, 255, 255);
+}
+
+.icone-acordion-filtrar{
+    width: 45%;
+}
+
+.fundo-categorias-filtro{
+    background-color: rgb(186, 182, 182);
+}
+
+.div-nome-item{
+    max-width: 12cm;
+    height: 3cm;
+}
+.tamanho-texto-item{
+    font-size: 100%;
+}
+
+.icone-comprar{
+    width: 10%;
+}
+
+.distancia-cards{
+    margin-top: 50px;
+}
+
+.div-img-produto{
+    background-color: rgb(255, 255, 255);
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 50%;
+}
+
+.img-produto{
+    object-fit: contain;
+    min-width: 230px;
+}
+
+.titulo-descricao-produto{
+    color: blue;
+}
+
+.texto-descricao-produto{
+    text-align: justify;
+}
+
+.titulo-produto{
+    text-align: left;
+    margin-top: 2%;
+}
+
+.fundo-direito-produto{
+    background-color: white ;
+}
+
+.texto-feito-por{
+    text-align: left;
+    color: blue;
+}
+
+.img-chibi-config{
+    width: 5rem;
+}
+.div-dados-usuario{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.enviar-dados-usuario-button{
+    width: 10rem;
+}

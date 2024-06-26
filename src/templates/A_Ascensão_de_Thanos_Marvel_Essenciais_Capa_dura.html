@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}AniPop - A Ascensão de Thanos: Marvel Essenciais Capa dura {% endblock %}
+
+
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-12 col-lg-6">
+            <div class="rounded ratio ratio-1x1 div-img-produto">
+                <center>
+                    <img src="{{url_for('static', filename='imagens/produtos/Thanos_HQ.jpg')}}" class="card-img-top img-produto" alt="...">
+                </center>
+            </div>
+
+
+            <br><br>
+            <hr>
+            <h3 class="titulo-descricao-produto">Descrição do Produto</h3>
+
+            <ul>
+                <li>
+                    <p  class="texto-descricao-produto">Neste conto de tragédia, destino e manipulação,
+                        Thanos, o flagelo do cosmo, se revela um conquistador
+                        incomparável. De onde veio este semideus da morte e da destruição? E, mais importante: o que ele
+                        quer?
+                        Descubra como uma jornada de amor verdadeiro pode gerar um rio de sangue capaz de alterar não
+                        apenas a
+                        vida de um garoto, mas também a galáxia e a natureza do próprio Universo Marvel! Este volume de
+                        120
+                        páginas reúne as edições 1 a 5 da minissérie Thanos Rising, da incrível dupla criativa Jason
+                        Aaron
+                        (Thor: O Deus do Trovão, Wolverine & Os X-Men) e Simone Bianchi (Thor: Por Asgard, X-Men: Caixa
+                        Fantasma).</p>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="col-12 col-lg-6 fundo-direito-produto">
+
+            <h2 class="titulo-produto">A Ascensão de Thanos: Marvel Essenciais Capa
+                dura</h2>
+            <p class="texto-feito-por">Feito por: Jason Aaron </p>
+            <hr>
+            <h6 class="card-text preco-comum">De R$ 49,90</h6>
+            <h3 class="card-text preco-promo">Por R$ 34,93</h3><br>
+
+            <a href="/A_Ascensão_de_Thanos_Marvel_Essenciais_Capa_dura" class="btn btn-primary"
+                style="width:40%;">Comprar<img src="{{url_for('static', filename='imagens/icons-logo/Carrinho_Icon.png')}}"
+                    style="width: 10%;"></a>
+            <br><br>
+            <img src="{{url_for('static', filename='imagens/icons-logo/Icons_3.png')}}" class="card-img-top" alt="..."
+                style="width: 30%; min-width: 280px">
+            <br><br>
+            <hr>
+            <h6 class="fw-bold">Detalhes do Produto</h6>
+            <ul style="text-align: justify;">
+                <li>
+                    <p>Número de páginas
+                        120 páginas
+                    </p>
+                </li>
+
+                <li>
+                    <p>Idioma
+                        Português
+                    </p>
+                </li>
+
+                <li>
+                    <p>Editora
+                        Panini
+                    </p>
+                </li>
+
+                <li>
+                    <p>Dimensões
+                        26.4 x 17.4 x 1.2 cm
+                        
+                    </p>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}
+
+
+{% block voltar %}<a href="/A_Ascensão_de_Thanos_Marvel_Essenciais_Capa_dura" class="btn btn-outline-light btn-lg "
+    role="button">Voltar para o topo</a>{% endblock %}
