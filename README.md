@@ -22,10 +22,6 @@ O Anipop tem como objetivo principal desenvolver um e-commerce completo, onde os
 - **Página do Produto "A Ascensão de Thanos: Marvel Essenciais Capa dura"**: Visualização de informações detalhadas sobre o produto.
 - **Página da Categoria Mangás**: Listagem de produtos específicos da categoria mangás.
 
-## Demonstração
-
-![Texto Alternativo](Demonstração - Gif.gif)
-
 
 ## Como Executar o Projeto
 
